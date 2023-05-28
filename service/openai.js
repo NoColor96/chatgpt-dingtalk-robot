@@ -9,7 +9,7 @@ export class OpenAI {
     #openai = null;
 
     constructor() {
-        this.#configuration = new Configuration( {apiKey: process.env.OPENAI_API_KEY} );
+        this.#configuration = new Configuration( {apiKey: process.env.OPENAI_API_KEY, basePath: process.env.BASE_PATH} );
         this.#openai = new OpenAIApi(this.#configuration);
     }
 
